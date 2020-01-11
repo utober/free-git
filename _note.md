@@ -38,6 +38,6 @@
 
 >> git commit -a -m "Message..."  :: git add & git commit 동시에 처리
 
-
+>> git diff
 
 
