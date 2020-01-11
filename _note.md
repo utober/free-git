@@ -105,3 +105,4 @@ ________________________________________________________________
 ** 합치기 다른 방식
 >> git reset HEAD~1 --hard (되돌리기)
 >> git rebase development
+>> git rebase --continue
