@@ -106,3 +106,23 @@ ________________________________________________________________
 >> git reset HEAD~1 --hard (되돌리기)
 >> git rebase development
 >> git rebase --continue
+
+>> git cherry-pick <commit ID> :: 다른 branch에 있는 중요사항만 가져오기
+>> git commit -am "체리픽"
+
+>> git tag v1.0.0   :: commit에 태그달기
+>> git tag  :: v1.0.기
+>> git reset v1.0.0 :: 돌아가기
+
+>> git stash   :: 임시저장
+>> git stash list
+>> git checkout development
+>> git checkout master
+>> git stash apply
+>> git checkout development
+>> git stash apply  :: 
+>> git add .
+>> git commit -am "stash"
+>> git push origin master
+
+
