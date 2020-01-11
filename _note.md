@@ -76,5 +76,18 @@ ________________________________________________________________
 >> git reset HEAD~1     :: 하나 뒤로 되돌아감 :: 커밋 자체를 제거
 
 >> git reset HEAD~1 --soft  :: file은 untracked 파일로 돌아감
+>> git reset --hard     :: 새커밋을 하지 않은 상태에서 초록/빨강에서 기존커밋으로 돌아감
+>> git reset <커밋고유번호>  ::  커밋 선택삭제
 
-- git reflog    ::감
+>> git revert HEAD      :: 실수 커밋을 삭제하지 않고 수정해서 새로운 커밋 날려줌(실수커밋리셋)
+   :: 실수로 github에 올렸을 경우 실수 커밋도 기록에 남겨지므로 revert로 해서 올려줌
+
+- git reflog    ::??
+
+## branch
+
+>> git branch       :: * master
+>> git branch development   :: 신규 branch 생성
+>> git branch       :: development / * master   
+>> git checkout development     :: branch development로 변경
+>> git branch       :: * development / master
