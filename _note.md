@@ -43,3 +43,38 @@
 - git remote add <name> <URL>
 >> git remote add origin https://github.com/utober/free-git :: 원격주소
 >> git push origin master   :: 원격지 저장소에 업로드
+
+- 작업전 서버에서 commit 된 내용 내려받아서 작업(팀작업시 다른 사람이 파일 수정)
+- git pull <remote> <branch>
+>> git pull origin master
+
+- 명령줄 한글 깨짐
+>> set LC_ALL=ko_KR.UTF-8
+
+- git status 결과내용 한글깨짐
+>> git config --global --edit
+    + [core] quotepath = false  내용 추가 후 [esc] :wq 순으로 저장 후 빠져나옴
+>> git config --global core.quotepath=false :: 라인에 직접 입력하는 방법
+
+## 실수로 커밋한 것 되돌리기
+
+* Untracked --> Unmodified --> Modified(빨강) --> Stage(초록)
+  |------------------- add the file ------------------------>
+                      |---Edit the file-->
+                                         |---Stage the file-->
+  <--Remove the file--|
+                      <-----------------commit---------------|
+
+________________________________________________________________
+
+[기존커밋] ---> 빨강이  --> 초록이  --> [새커밋]
+                              |<------------|    (soft)
+                  |<------------------------|    (Mixed) :: 
+    |<--------------------------------------|    (hard)
+
+>> git commit -m "실수로커밋"
+>> git reset HEAD~1     :: 하나 뒤로 되돌아감 :: 커밋 자체를 제거
+
+>> git reset HEAD~1 --soft  :: file은 untracked 파일로 돌아감
+
+- git reflog    ::감
