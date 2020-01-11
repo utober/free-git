@@ -103,4 +103,5 @@ ________________________________________________________________
 >> git add <file>       :: 고친거 반영 or >> git commit -am "합체"
 
 ** 합치기 다른 방식
->> git reset HEAD~1 --hard
+>> git reset HEAD~1 --hard (되돌리기)
+>> git rebase development
