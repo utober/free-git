@@ -40,4 +40,6 @@
 
 >> git diff
 
-
+- git remote add <name> <URL>
+>> git remote add origin https://github.com/utober/free-git :: 원격주소
+>> git push origin master   :: 원격지 저장소에 업로드
