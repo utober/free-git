@@ -85,9 +85,22 @@ ________________________________________________________________
 - git reflog    ::??
 
 ## branch
-
 >> git branch       :: * master
 >> git branch development   :: 신규 branch 생성
 >> git branch       :: development / * master   
 >> git checkout development     :: branch development로 변경
 >> git branch       :: * development / master
+
+## 첫 시작 습관적으로
+>> git branch   :: 확인
+>> git pull origin master   :: 서버측 변경사항 받아오기(다른 작업자 작업)
+
+## master에서 development 작업 내용 가져오기
+>> git checkout master
+>> git merge development    :: CONFLICT -- 충돌 부분 알려줌
+-  내용수정
+>> git merge --abort    :: merge 과정 포기
+>> git add <file>       :: 고친거 반영 or >> git commit -am "합체"
+
+** 합치기 다른 방식
+>> git reset HEAD~1 --hard
